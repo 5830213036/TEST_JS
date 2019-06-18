@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>BMI</h1>
+    <hr />
+    <table>
+      <tr>
+        <td>
+          <!-- html create for bmi -->
+          <form
+            onsubmit="event.preventDefault();onFormSubmit()"
+            autocomplete="off"
+          >
+            <div>
+              <label>Name* :</label
+              ><label class="validation-error hide" id="ValidationError"
+                >this field is required</label
+              >
+              <br />
+              <input type="text" name="name" id="name" />
+            </div>
+            <div>
+              <label>Weight(.kg) :</label>
+              <br />
+              <input type="number" name="weight" id="weight" />
+            </div>
+            <div>
+              <label>Height(.cm) :</label>
+              <br />
+              <input type="number" name="height" id="height" />
+            </div>
+            <div>
+              <!-- <label>BMI :</label> -->
+              <p id="result">Here will be your result</p>
+              <br />
+              <!-- <input type="text" name="bmi" id="bmi"/> -->
+              <input type="submit" value="save" />
+            </div>
+          </form>
+        </td>
+        <tr>
+          <!-- html list all records -->
+          <table class="list" id="allList">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Weight(.kg)</th>
+                <th>Height(.cm)</th>
+                <th>BMI</th>
+                <th>Diff</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </tr>
+      </tr>
+    </table>
+    <script src="index.js"></script>
+  </body>
+</html>
